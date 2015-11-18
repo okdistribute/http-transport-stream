@@ -6,7 +6,7 @@ Executes a command using duplex http or https.
 npm install http-transport-stream
 ```
 
-## `http-transport-stream(cmd, url)`
+#### `http-transport-stream(cmd, url)`
 
 `cmd`: the data to send to the URL
 

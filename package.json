@@ -21,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/karissa/http-transport-stream/issues"
   },
-  "homepage": "https://github.com/karissa/http-transport-stream#readme"
+  "homepage": "https://github.com/karissa/http-transport-stream#readme",
+  "dependencies": {
+    "duplexify": "^3.4.2"
+  },
+  "devDependencies": {
+    "getport": "^0.1.0",
+    "tape": "^4.2.2"
+  }
 }
