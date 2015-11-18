@@ -2,6 +2,8 @@
 
 Executes a command using duplex http or https.
 
+[![build status](http://img.shields.io/travis/karissa/http-transport-stream.svg?style=flat)](http://travis-ci.org/karissa/http-transport-stream)
+
 ```
 npm install http-transport-stream
 ```
