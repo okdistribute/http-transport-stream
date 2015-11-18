@@ -3,19 +3,18 @@ var duplexify = require('duplexify')
 var https = require('https')
 var url = require('url')
 
-module.exports = function (cmd, transport) {
+module.exports = function (transport) {
   var u = url.parse(transport)
   var protocolName = u.protocol.slice(0, -1)
-  if (protocolName === 'http') return request(http, cmd, u)
-  if (protocolName === 'https') return request(https, cmd, u)
+  if (protocolName === 'http') return request(http, u)
+  if (protocolName === 'https') return request(https, u)
   throw new Error('Unsupported protocol.')
 }
 
-function request (mod, cmd, u) {
+function request (mod, u) {
   var stream = duplexify()
   var headers = {}
 
-  if (cmd) headers['X-Command'] = cmd
   if (u.auth) headers.Authorization = 'Basic ' + new Buffer(u.auth).toString('base64')
 
   var req = mod.request({
